@@ -9,7 +9,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://127.0.0.1:5500",
-    "https://YOUR-NETLIFY-LINK.netlify.app"
+    "https://fullstack-init2026.netlify.app/"
   ],
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
@@ -36,7 +36,7 @@ const registrationSchema = new mongoose.Schema({
 const Registration = mongoose.model("Registration", registrationSchema);
 
 // API Route
-app.post("/register", async (req, res) => {
+app.post("https://fullstack-project-init2026-0.onrender.com/register", async (req, res) => {
   try {
 
     const newUser = new Registration(req.body);
